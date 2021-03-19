@@ -14,7 +14,26 @@ namespace Infrastructure.Utilities.Interceptors
 
         public override void Intercept(IInvocation invocation)
         {
-            base.Intercept(invocation);
+            var isSuccess = true;
+            OnBefore(invocation);
+            try
+            {
+                invocation.Proceed();
+            }
+            catch (Exception exception)
+            {
+                isSuccess = false;
+                OnException(invocation, exception);
+                throw;
+            }
+            finally
+            {
+                if (isSuccess)
+                {
+                    OnSuccess(invocation);
+                }
+            }
+            OnAfter(invocation);
         }
 
     }

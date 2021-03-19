@@ -10,7 +10,6 @@
     <Folder Include="CrossCuttingConcerns\Caching\" />
     <Folder Include="CrossCuttingConcerns\Validation\" />
     <Folder Include="DataAccess\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
   <ItemGroup>
