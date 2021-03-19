@@ -10,7 +10,7 @@ namespace Infrastructure.Utilities.Interceptors
     {
         public IInterceptor[] SelectInterceptors(Type type, MethodInfo method, IInterceptor[] interceptors)
         {
-            var classAttributes = type.GetCustomAttribute<MethodInterceptionBaseAttribute>(true).to
+            var classAttributes = type.GetCustomAttribute<MethodInterceptionBaseAttribute>(true);
         }
     }
 }

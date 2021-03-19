@@ -41,7 +41,7 @@ namespace Infrastructure.Utilities.Security.JWT
             {
                 Token = token,
                 Expiration = _accessTokenExpiration
-            }
+            };
         }
 
         private JwtSecurityToken CreateJwtSecurityToken(
